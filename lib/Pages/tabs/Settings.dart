@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertestdemo/Table.dart';
+import '../../component/Table.dart';
 
 class SettingPage extends StatefulWidget {
   _SettingPageState createState() => _SettingPageState();

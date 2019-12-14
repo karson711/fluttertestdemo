@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../Collection2.dart';
-import '../../Table.dart';
-import '../../RowColumnTest.dart';
-import '../../Wrap.dart';
+import '../../component/Collection2.dart';
+import '../../component/Table.dart';
+import '../../component/RowColumnTest.dart';
+import '../../component/Wrap.dart';
 
 class CategoryPage extends StatefulWidget {
   _CategoryPageState createState() => _CategoryPageState();

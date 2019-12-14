@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Collection2.dart';
+import '../component/Collection2.dart';
 
 class AppBarDemoPage extends StatelessWidget {
   @override
