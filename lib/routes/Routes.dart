@@ -8,6 +8,7 @@ import 'package:fluttertestdemo/Pages/user/RegisterThird.dart';
 import 'package:fluttertestdemo/Pages/vcs/ProductInfo.dart';
 import 'package:fluttertestdemo/Pages/vcs/ProductDetail.dart';
 import '../Pages/AppBarDemo.dart';
+import '../Pages/TabbarController.dart';
 
 //配置路由
 final routes = {
@@ -20,6 +21,7 @@ final routes = {
   '/registerSecond': (context) => RegisterSecondPage(),
   '/registerThird': (context) => RegisterThirdPage(),
   '/appBarDemo': (context) => AppBarDemoPage(),
+  '/tabBarController': (context) => TabBarControlPage(),
 };
 
 //固定写法

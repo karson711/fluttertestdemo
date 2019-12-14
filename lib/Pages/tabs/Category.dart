@@ -14,7 +14,7 @@ class _CategoryPageState extends State<CategoryPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-      length: 4,
+      length: 8,
       child: Scaffold(
         appBar: AppBar(
           title: Row(
@@ -22,6 +22,7 @@ class _CategoryPageState extends State<CategoryPage> {
             children: <Widget>[
               Expanded(
                 child: TabBar(
+                  isScrollable: true,
                   indicatorColor: Colors.blue,
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.blueGrey,
@@ -30,7 +31,11 @@ class _CategoryPageState extends State<CategoryPage> {
                     Tab(text: "热销"),
                     Tab(text: "推荐"),
                     Tab(text: "今日头条"),
-                    Tab(text: "体验新闻")
+                    Tab(text: "体验新闻"),
+                    Tab(text: "推薦1"),
+                    Tab(text: "推荐2"),
+                    Tab(text: "推薦3"),
+                    Tab(text: "推薦4"),
                   ],
                 ),
               )
@@ -42,7 +47,11 @@ class _CategoryPageState extends State<CategoryPage> {
             CollectionDemo(),
             TableDemo(),
             RowColumnTest(),
-            WrapDemo()
+            WrapDemo(),
+            Container(child: Text('推薦1')),
+            Container(child: Text('推薦2')),
+            Container(child: Text('推薦3')),
+            Container(child: Text('推薦4')),
           ],
         ),
       ),

@@ -16,8 +16,7 @@ class _HomePageState extends State<HomePage> {
         RaisedButton(
             child: Text('基本路由传值'),
             onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return ProductDetailPage();
               }));
             }),
@@ -49,6 +48,13 @@ class _HomePageState extends State<HomePage> {
             Navigator.pushNamed(context, '/appBarDemo');
           },
         ),
+        SizedBox(height: 20),
+        RaisedButton(
+            child: Text("TabController定义顶部tab切换 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/tabBarController');
+            })
       ],
     );
   }
