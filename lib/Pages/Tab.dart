@@ -42,6 +42,26 @@ class _TabsState extends State<Tabs> {
           title: this._pageTitleList[this._currentIndex],
         ),
         body: this._pageList[this._currentIndex],
+        floatingActionButton: Container(
+          height: 80,
+          width: 80,
+          margin: EdgeInsets.only(top: 10),
+          padding: EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(40),
+            color: Colors.white
+          ),
+          child: FloatingActionButton(
+            child: Icon(Icons.add),
+            onPressed: (){
+              setState(() {
+                this._currentIndex = 1;
+              });
+            },
+            backgroundColor: this._currentIndex==1?Colors.red:Colors.yellow,
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: this._currentIndex,
             iconSize: 36.0, //icon的大小
