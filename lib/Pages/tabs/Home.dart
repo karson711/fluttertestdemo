@@ -9,9 +9,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      spacing: 10,
+      runSpacing: 10,
       children: <Widget>[
         RaisedButton(
             child: Text('基本路由传值'),
@@ -20,48 +20,66 @@ class _HomePageState extends State<HomePage> {
                 return ProductDetailPage();
               }));
             }),
-        SizedBox(height: 20),
         RaisedButton(
             child: Text('命名路由传值'),
             onPressed: () {
               Navigator.of(context)
                   .pushNamed('/productinfo', arguments: {'pid': 456});
             }),
-        SizedBox(height: 20),
         RaisedButton(
           child: Text("跳转到登录页面"),
           onPressed: () {
             Navigator.pushNamed(context, '/login');
           },
         ),
-        SizedBox(height: 20),
         RaisedButton(
           child: Text("跳转到注册页面"),
           onPressed: () {
             Navigator.pushNamed(context, '/registerFirst');
           },
         ),
-        SizedBox(height: 20),
         RaisedButton(
           child: Text("跳转AppBarDemo页面"),
           onPressed: () {
             Navigator.pushNamed(context, '/appBarDemo');
           },
         ),
-        SizedBox(height: 20),
         RaisedButton(
             child: Text("TabController定义顶部tab切换 "),
             onPressed: () {
               //路由跳转
               Navigator.pushNamed(context, '/tabBarController');
             }),
-        SizedBox(height: 20),
         RaisedButton(
             child: Text("跳转按钮展示页面 "),
             onPressed: () {
               //路由跳转
               Navigator.pushNamed(context, '/buttons');
-            })
+            }),
+        RaisedButton(
+            child: Text("跳转表单TextField展示页面 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/textfield');
+            }),
+        RaisedButton(
+            child: Text("跳转表单CheckBox展示页面 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/checkbox');
+            }),
+        RaisedButton(
+            child: Text("跳转表单Radio展示页面 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/radio');
+            }),
+        RaisedButton(
+            child: Text("跳转表单Demo页 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/listdemo');
+            }),
       ],
     );
   }

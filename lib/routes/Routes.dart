@@ -11,6 +11,10 @@ import '../Pages/AppBarDemo.dart';
 import '../Pages/TabbarController.dart';
 import '../Pages/user/UserInfo.dart';
 import '../component/Buttons.dart';
+import '../component/TextField.dart';
+import '../component/checkbox.dart';
+import '../component/Radio.dart';
+import '../component/ListDemo.dart';
 
 //配置路由
 final routes = {
@@ -26,6 +30,10 @@ final routes = {
   '/tabBarController': (context) => TabBarControlPage(),
   '/user': (context) => UserInfoPage(),
   '/buttons': (context) => ButtonsPage(),
+  '/textfield': (context) => TextFieldDemo(),
+  '/checkbox': (context) => CheckBoxDemo(),
+  '/radio': (context) => RadioDemo(),
+  '/listdemo': (context) => ListDemoPage(),
 };
 
 //固定写法
