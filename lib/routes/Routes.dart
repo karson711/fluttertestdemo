@@ -7,6 +7,7 @@ import 'package:fluttertestdemo/Pages/user/RegisterSecond.dart';
 import 'package:fluttertestdemo/Pages/user/RegisterThird.dart';
 import 'package:fluttertestdemo/Pages/vcs/ProductInfo.dart';
 import 'package:fluttertestdemo/Pages/vcs/ProductDetail.dart';
+import 'package:fluttertestdemo/component/Dialog.dart';
 import '../Pages/AppBarDemo.dart';
 import '../Pages/TabbarController.dart';
 import '../Pages/user/UserInfo.dart';
@@ -17,6 +18,7 @@ import '../component/Radio.dart';
 import '../component/ListDemo.dart';
 import '../component/systemDate.dart';
 import '../component/datePickerPub.dart';
+import '../component/SwiperDemo.dart';
 
 
 //配置路由
@@ -39,6 +41,8 @@ final routes = {
   '/listdemo': (context) => ListDemoPage(),
   '/systemdate': (context) => SystemDateDemo(),
   '/datepickerpub': (context) => DatePickerPubDemo(),
+  '/swiperdemo': (context) => SwiperDemo(),
+  '/dialogdemo': (context) => DialogDemo(),
   
 };
 

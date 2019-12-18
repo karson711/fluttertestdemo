@@ -21,7 +21,8 @@ class _DatePickerPubDemoState extends State<DatePickerPubDemo> {
         minDateTime: DateTime.parse('1990-05-12'),
         maxDateTime: DateTime.parse('2021-11-25'),
         initialDateTime: _dateTime,
-        dateFormat: 'yyyy-MM-dd',
+        pickerMode: DateTimePickerMode.datetime,
+        dateFormat: 'yyyy年MM月dd   EEE,H时:m分',
         locale: DateTimePickerLocale.zh_cn, onCancel: () {
       debugPrint('onCancel');
     }, onConfirm: (DateTime dateTime, List<int> selectedIndex) {
@@ -50,7 +51,7 @@ class _DatePickerPubDemoState extends State<DatePickerPubDemo> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                          '${formatDate(_dateTime, [yyyy, '年', mm, '月', dd])}'),
+                          '${formatDate(_dateTime, [yyyy, '年', mm, '月', dd,'  ',HH, ':' ,'nn'])}'),
                       Icon(Icons.arrow_drop_down)
                     ],
                   ),

@@ -92,6 +92,18 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/datepickerpub');
             }),
+        RaisedButton(
+            child: Text("跳转第三方轮播图Swiper "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/swiperdemo');
+            }),
+        RaisedButton(
+            child: Text("跳转Dialog页面 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/dialogdemo');
+            }),
       ],
     );
   }
