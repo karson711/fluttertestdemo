@@ -15,6 +15,9 @@ import '../component/TextField.dart';
 import '../component/checkbox.dart';
 import '../component/Radio.dart';
 import '../component/ListDemo.dart';
+import '../component/systemDate.dart';
+import '../component/datePickerPub.dart';
+
 
 //配置路由
 final routes = {
@@ -34,6 +37,9 @@ final routes = {
   '/checkbox': (context) => CheckBoxDemo(),
   '/radio': (context) => RadioDemo(),
   '/listdemo': (context) => ListDemoPage(),
+  '/systemdate': (context) => SystemDateDemo(),
+  '/datepickerpub': (context) => DatePickerPubDemo(),
+  
 };
 
 //固定写法

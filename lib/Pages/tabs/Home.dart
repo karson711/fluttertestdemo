@@ -80,6 +80,18 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/listdemo');
             }),
+        RaisedButton(
+            child: Text("跳转系统Date页 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/systemdate');
+            }),
+        RaisedButton(
+            child: Text("跳转第三方库Date页 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/datepickerpub');
+            }),
       ],
     );
   }
