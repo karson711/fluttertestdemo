@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:fluttertoast/fluttertoast.dart';
+import '../component/JKDialog.dart';
 
 class DialogDemo extends StatefulWidget {
   DialogDemo({Key key}) : super(key: key);
@@ -85,29 +88,29 @@ class _DialogDemoState extends State<DialogDemo> {
               children: <Widget>[
                 ListTile(
                   title: Text('分享A'),
-                  onTap: (){
-                    Navigator.pop(context,'A');
+                  onTap: () {
+                    Navigator.pop(context, 'A');
                   },
                 ),
                 Divider(),
                 ListTile(
                   title: Text('分享B'),
-                  onTap: (){
-                    Navigator.pop(context,'B');
+                  onTap: () {
+                    Navigator.pop(context, 'B');
                   },
                 ),
                 Divider(),
                 ListTile(
                   title: Text('分享C'),
-                  onTap: (){
-                    Navigator.pop(context,'C');
+                  onTap: () {
+                    Navigator.pop(context, 'C');
                   },
                 )
               ],
             ),
           );
         });
-        print(result);
+    print(result);
   }
 
   void _showToast() {
@@ -118,12 +121,32 @@ class _DialogDemoState extends State<DialogDemo> {
         timeInSecForIos: 1,
         backgroundColor: Colors.red,
         textColor: Colors.white,
-        fontSize: 16.0
-    );
+        fontSize: 16.0);
+  }
+
+  void _customDialog() async {
+    var result = await showDialog(
+        context: context,
+        builder: (context) {
+          return JKDialog(title: '关于我们', content: '关于我们这款产品');
+        });
+    print(result);
+  }
+
+  void _showTimer(context) {
+    var timer;
+    timer = Timer.periodic(Duration(milliseconds: 3000), (t) {
+      print('关闭');
+      Navigator.pop(context);
+      t.cancel();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    //开启定时器
+    _showTimer(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -152,6 +175,11 @@ class _DialogDemoState extends State<DialogDemo> {
               RaisedButton(
                 child: Text('toast-fluttertoast第三方库'),
                 onPressed: _showToast,
+              ),
+              SizedBox(height: 20),
+              RaisedButton(
+                child: Text('自定义Dialog'),
+                onPressed: _customDialog,
               )
             ],
           ),
