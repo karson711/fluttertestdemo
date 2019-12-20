@@ -21,6 +21,8 @@ import '../component/datePickerPub.dart';
 import '../component/SwiperDemo.dart';
 import '../Pages/vcs/HttpRequestPage.dart';
 import '../Pages/vcs/HttpReultShowDemo.dart';
+import '../Pages/vcs/DioRequestPage.dart';
+import '../Pages/vcs/DioRequestResultPage.dart';
 
 
 //配置路由
@@ -47,6 +49,8 @@ final routes = {
   '/dialogdemo': (context) => DialogDemo(),
   '/httprequest': (context) => HttpRequestPageDemo(),
   '/httpresult': (context) => HttpResultShowDemo(),
+  '/diorequest': (context) => DioRequestDemoPage(),
+  '/dioresult': (context) => DioRequestResultPage(),
 };
 
 //固定写法

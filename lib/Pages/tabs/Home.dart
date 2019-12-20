@@ -110,6 +110,12 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/httprequest');
             }),
+            RaisedButton(
+            child: Text("跳转Dio请求页面 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/diorequest');
+            }),
       ],
     );
   }
