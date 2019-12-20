@@ -104,6 +104,12 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/dialogdemo');
             }),
+            RaisedButton(
+            child: Text("跳转Http请求页面 "),
+            onPressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/httprequest');
+            }),
       ],
     );
   }

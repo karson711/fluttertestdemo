@@ -19,6 +19,8 @@ import '../component/ListDemo.dart';
 import '../component/systemDate.dart';
 import '../component/datePickerPub.dart';
 import '../component/SwiperDemo.dart';
+import '../Pages/vcs/HttpRequestPage.dart';
+import '../Pages/vcs/HttpReultShowDemo.dart';
 
 
 //配置路由
@@ -43,7 +45,8 @@ final routes = {
   '/datepickerpub': (context) => DatePickerPubDemo(),
   '/swiperdemo': (context) => SwiperDemo(),
   '/dialogdemo': (context) => DialogDemo(),
-  
+  '/httprequest': (context) => HttpRequestPageDemo(),
+  '/httpresult': (context) => HttpResultShowDemo(),
 };
 
 //固定写法
