@@ -23,6 +23,7 @@ import '../Pages/vcs/HttpRequestPage.dart';
 import '../Pages/vcs/HttpReultShowDemo.dart';
 import '../Pages/vcs/DioRequestPage.dart';
 import '../Pages/vcs/DioRequestResultPage.dart';
+import '../component/WebVC.dart';
 
 
 //配置路由
@@ -51,6 +52,7 @@ final routes = {
   '/httpresult': (context) => HttpResultShowDemo(),
   '/diorequest': (context) => DioRequestDemoPage(),
   '/dioresult': (context) => DioRequestResultPage(),
+  '/webvc': (context,{arguments}) => WebVCPage(arguments:arguments),
 };
 
 //固定写法

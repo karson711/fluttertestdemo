@@ -43,6 +43,7 @@ class _DioRequestResultPageState extends State<DioRequestResultPage> {
           'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=${this._page}';
       Response response = await Dio().get(dioUrl);
       var arr = json.decode(response.data)['result'];
+      print(arr);
       setState(() {
         if (this._page == 1) {
           this._list = arr;
@@ -86,20 +87,34 @@ class _DioRequestResultPageState extends State<DioRequestResultPage> {
                   //列表渲染到最后一条的时候加一个圈圈
                   if (index == this._list.length - 1) {
                     //拉到底
-                    return Column(
-                      children: <Widget>[
+                    var children2 = <Widget>[
                         ListTile(
                           title: Text('${this._list[index]['title']}', maxLines: 1),
+                          onTap: (){
+                            Navigator.pushNamed(context, '/webvc',arguments: {
+                              'title':'${this._list[index]['title']}',
+                              'url':'http://www.phonegap100.com/newscontent.php?aid=${this._list[index]['aid']}'
+                            });
+                          }
                         ),
                         Divider(),
                         _getMoreWidget()
-                      ],
+                      ];
+                    return Column(
+                      children: children2,
                     );
-                  } else {
+                  } 
+                  else {
                     return Column(
                       children: <Widget>[
                         ListTile(
                           title: Text('${this._list[index]['title']}', maxLines: 1),
+                          onTap: (){
+                            Navigator.pushNamed(context, '/webvc',arguments: {
+                              'title':'${this._list[index]['title']}',
+                              'url':'http://www.phonegap100.com/newscontent.php?aid=${this._list[index]['aid']}'
+                            });
+                          },
                         ),
                         Divider()
                       ],
