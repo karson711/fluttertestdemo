@@ -37,7 +37,7 @@ dependencies:
   video_player: ^0.10.3+3
   chewie: ^0.9.8+1
   device_info: ^0.4.1+1
-
+  connectivity: ^0.4.5+7
 
 dev_dependencies:
   flutter_test:

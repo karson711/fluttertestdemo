@@ -4,6 +4,7 @@
 
 #import "GeneratedPluginRegistrant.h"
 #import <amap_location/AmapLocationPlugin.h>
+#import <connectivity/ConnectivityPlugin.h>
 #import <device_info/DeviceInfoPlugin.h>
 #import <flutter_inappwebview/InAppWebViewFlutterPlugin.h>
 #import <fluttertoast/FluttertoastPlugin.h>
@@ -15,6 +16,7 @@
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [AmapLocationPlugin registerWithRegistrar:[registry registrarForPlugin:@"AmapLocationPlugin"]];
+  [FLTConnectivityPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTConnectivityPlugin"]];
   [FLTDeviceInfoPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTDeviceInfoPlugin"]];
   [InAppWebViewFlutterPlugin registerWithRegistrar:[registry registrarForPlugin:@"InAppWebViewFlutterPlugin"]];
   [FluttertoastPlugin registerWithRegistrar:[registry registrarForPlugin:@"FluttertoastPlugin"]];

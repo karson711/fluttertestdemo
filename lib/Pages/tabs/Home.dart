@@ -12,13 +12,19 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       children: <Widget>[
       RaisedButton(
+              child: Text('Connectivity网络监测'),
+              onPressed: (){
+                  Navigator.pushNamed(context, '/connectivity');
+              },
+            ),
+      RaisedButton(
               child: Text('Device 或者设备信息'),
               onPressed: (){
                   Navigator.pushNamed(context, '/deviceinfo');
               },
             ),
         RaisedButton(
-              child: Text('video_player+chewie播放视频'),
+              child: Text('video_player+chewie播放视频(iOS需真机)'),
               onPressed: (){
                   Navigator.pushNamed(context, '/chewieVideo');
               },
