@@ -26,6 +26,8 @@ import '../Pages/vcs/DioRequestResultPage.dart';
 import '../component/WebVC.dart';
 import '../component/Location.dart';
 import '../component/ImagePicker.dart';
+import '../Pages/vcs/ChewieVideo.dart';
+import '../component/DeviceInfo.dart';
 
 
 //配置路由
@@ -57,6 +59,8 @@ final routes = {
   '/webvc': (context,{arguments}) => WebVCPage(arguments:arguments),
   '/amaplocation': (context) => LocationPage(),
   '/imagepicker': (context) => ImagePickerPage(),
+  '/chewieVideo': (context) => ChewieVideoDemo(),
+  '/deviceinfo': (context) => DeviceInfoPage(),
 };
 
 //固定写法

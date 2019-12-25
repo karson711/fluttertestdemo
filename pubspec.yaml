@@ -34,6 +34,9 @@ dependencies:
   flutter_inappwebview: ^2.1.0+1
   amap_location: ^0.2.0
   image_picker: ^0.6.2+1
+  video_player: ^0.10.3+3
+  chewie: ^0.9.8+1
+  device_info: ^0.4.1+1
 
 
 dev_dependencies:

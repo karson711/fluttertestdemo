@@ -9,39 +9,47 @@ class LocationPage extends StatefulWidget {
 
 class _LocationPageState extends State<LocationPage> {
 
-  AMapLocation _loc;
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text('直接获取定位'),
-        ),
-        body: new Center(
-          child: _loc == null
-              ? new Text("正在定位")
-              : new Text("定位成功:${_loc.formattedAddress}"),
-        ));
-  }
-
-  void _checkPersmission() async {
-    AMapLocation loc = await AMapLocationClient.getLocation(true);
-    setState(() {
-      _loc = loc;
-    });
-  }
+  double _longitude=0;
+  double _latitude=0;
 
   @override
   void initState() {
-    _checkPersmission();
+    // TODO: implement initState
     super.initState();
+    this._getLocation();
   }
 
-  @override
-  void dispose() {
-    //这里可以停止定位
-    //AMapLocationClient.stopLocation();
 
-    super.dispose();
+  _getLocation() async{
+    //启动一下
+    await AMapLocationClient.startup(new AMapLocationOption( desiredAccuracy:CLLocationAccuracy.kCLLocationAccuracyHundredMeters  ));  
+    //获取地理位置
+    var result = await AMapLocationClient.getLocation(true);
+
+    print("经度:${result.longitude}");
+
+    print("纬度:${result.latitude}");
+
+    setState(() {
+       this._longitude=result.longitude;
+       this._latitude=result.latitude;
+    });
+
+  } 
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("地理定位演示"),
+      ),
+      body:Column(
+        children: <Widget>[
+          Text("经度:${this._longitude}"),
+          Text("纬度:${this._latitude}"),
+        ],
+      ),
+    );
   }
 }

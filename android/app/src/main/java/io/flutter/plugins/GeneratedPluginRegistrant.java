@@ -2,9 +2,12 @@ package io.flutter.plugins;
 
 import io.flutter.plugin.common.PluginRegistry;
 import com.jzoom.amaplocation.AmapLocationPlugin;
+import io.flutter.plugins.deviceinfo.DeviceInfoPlugin;
 import com.pichillilorenzo.flutter_inappwebview.InAppWebViewFlutterPlugin;
 import io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin;
 import io.flutter.plugins.imagepicker.ImagePickerPlugin;
+import flutter.plugins.screen.screen.ScreenPlugin;
+import io.flutter.plugins.videoplayer.VideoPlayerPlugin;
 
 /**
  * Generated file. Do not edit.
@@ -15,9 +18,12 @@ public final class GeneratedPluginRegistrant {
       return;
     }
     AmapLocationPlugin.registerWith(registry.registrarFor("com.jzoom.amaplocation.AmapLocationPlugin"));
+    DeviceInfoPlugin.registerWith(registry.registrarFor("io.flutter.plugins.deviceinfo.DeviceInfoPlugin"));
     InAppWebViewFlutterPlugin.registerWith(registry.registrarFor("com.pichillilorenzo.flutter_inappwebview.InAppWebViewFlutterPlugin"));
     FluttertoastPlugin.registerWith(registry.registrarFor("io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin"));
     ImagePickerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.imagepicker.ImagePickerPlugin"));
+    ScreenPlugin.registerWith(registry.registrarFor("flutter.plugins.screen.screen.ScreenPlugin"));
+    VideoPlayerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.videoplayer.VideoPlayerPlugin"));
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {
