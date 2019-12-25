@@ -24,6 +24,8 @@ import '../Pages/vcs/HttpReultShowDemo.dart';
 import '../Pages/vcs/DioRequestPage.dart';
 import '../Pages/vcs/DioRequestResultPage.dart';
 import '../component/WebVC.dart';
+import '../component/Location.dart';
+import '../component/ImagePicker.dart';
 
 
 //配置路由
@@ -53,6 +55,8 @@ final routes = {
   '/diorequest': (context) => DioRequestDemoPage(),
   '/dioresult': (context) => DioRequestResultPage(),
   '/webvc': (context,{arguments}) => WebVCPage(arguments:arguments),
+  '/amaplocation': (context) => LocationPage(),
+  '/imagepicker': (context) => ImagePickerPage(),
 };
 
 //固定写法
