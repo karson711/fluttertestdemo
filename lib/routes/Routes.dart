@@ -29,6 +29,7 @@ import '../component/ImagePicker.dart';
 import '../Pages/vcs/ChewieVideo.dart';
 import '../component/DeviceInfo.dart';
 import '../component/Connectivity.dart';
+import '../component/StorageTest.dart';
 
 
 //配置路由
@@ -63,6 +64,7 @@ final routes = {
   '/chewieVideo': (context) => ChewieVideoDemo(),
   '/deviceinfo': (context) => DeviceInfoPage(),
   '/connectivity': (context) => ConnectivityDemo(),
+  '/storage': (context) => StorageDemo(),
 };
 
 //固定写法
