@@ -12,6 +12,24 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       children: <Widget>[
         RaisedButton(
+          child: Text('urllauncher打开外部应用、打开浏览器'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/urllauncher');
+          },
+        ),
+        RaisedButton(
+          child: Text('检查版本升级app'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/appversion');
+          },
+        ),
+        RaisedButton(
+          child: Text('扫描二维码条形码'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/scan');
+          },
+        ),
+        RaisedButton(
           child: Text('本地存储'),
           onPressed: () {
             Navigator.pushNamed(context, '/storage');

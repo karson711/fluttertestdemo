@@ -47,6 +47,7 @@ android {
         manifestPlaceholders = [
                 AMAP_KEY : "9c0c4919099f91d72c8902f9a224df11", /// 高德地图key
         ]
+        multiDexEnabled true
     }
 
     buildTypes {

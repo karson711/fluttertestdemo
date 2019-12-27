@@ -30,7 +30,9 @@ import '../Pages/vcs/ChewieVideo.dart';
 import '../component/DeviceInfo.dart';
 import '../component/Connectivity.dart';
 import '../component/StorageTest.dart';
-
+import '../component/Scan.dart';
+import '../Pages/vcs/AppversionPage.dart';
+import '../component/UrlLauncher.dart';
 
 //配置路由
 final routes = {
@@ -65,6 +67,10 @@ final routes = {
   '/deviceinfo': (context) => DeviceInfoPage(),
   '/connectivity': (context) => ConnectivityDemo(),
   '/storage': (context) => StorageDemo(),
+  '/scan': (context) => ScanDemo(),
+  '/appversion': (context) => AppversionPage(),
+  '/urllauncher': (context) => UrlLauncherDemo(),
+
 };
 
 //固定写法

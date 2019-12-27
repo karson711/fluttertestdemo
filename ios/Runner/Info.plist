@@ -4,14 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>NSAppleMusicUsageDescription</key>  
-    <string>App需要您的同意,才能访问媒体资料库</string>
-	<key>NSMicrophoneUsageDescription</key>   
-    <string>App需要您的同意,才能访问麦克风</string>
-	<key>NSCameraUsageDescription</key>   
-    <string>App需要您的同意,才能访问相机</string>
-	<key>NSPhotoLibraryUsageDescription</key>   
-    <string>App需要您的同意,才能访问相册</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,6 +20,15 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>alipay</string>
+		<string>baidumap</string>
+		<string>iosamap</string>
+		<string>comgooglemaps</string>
+		<string>qqmap</string>
+		<string>weixin</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -35,8 +36,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>App需要您的同意,才能访问媒体资料库</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App需要您的同意,才能访问相机</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>需要定位</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>App需要您的同意,才能访问麦克风</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App需要您的同意,才能访问相册</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
