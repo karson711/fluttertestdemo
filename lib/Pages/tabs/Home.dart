@@ -12,6 +12,18 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       children: <Widget>[
         RaisedButton(
+          child: Text('微信支付'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/wxpay');
+          },
+        ),
+        RaisedButton(
+          child: Text('支付宝支付'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/alipay');
+          },
+        ),
+        RaisedButton(
           child: Text('urllauncher打开外部应用、打开浏览器'),
           onPressed: () {
             Navigator.pushNamed(context, '/urllauncher');

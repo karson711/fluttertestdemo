@@ -33,6 +33,8 @@ import '../component/StorageTest.dart';
 import '../component/Scan.dart';
 import '../Pages/vcs/AppversionPage.dart';
 import '../component/UrlLauncher.dart';
+import '../Pages/vcs/Alipay.dart';
+import '../Pages/vcs/WXpay.dart';
 
 //配置路由
 final routes = {
@@ -70,7 +72,8 @@ final routes = {
   '/scan': (context) => ScanDemo(),
   '/appversion': (context) => AppversionPage(),
   '/urllauncher': (context) => UrlLauncherDemo(),
-
+  '/alipay': (context) => AlipayDemo(),
+  '/wxpay': (context) => WXPayDemo(),
 };
 
 //固定写法
